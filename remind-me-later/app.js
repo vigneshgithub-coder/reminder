@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const reminderRoutes = require('./remind-me-later/routes/reminderRoutes');
+const reminderRoutes = require('./routes/reminderRoutes');
 const cors=require('cors');
 require('dotenv').config(); // If using .env for DB URI
 
