@@ -11,7 +11,7 @@ export default function App() {
   useEffect(() => {
     const fetchReminders = async () => {
       try {
-        const res = await axios.get('https://reminder-ve5p.onrender.com//api/reminders')
+        const res = await axios.get('http://localhost:3000/api/reminders')
         setReminders(res.data.data) // backend returns { success, data }
       } catch (err) {
         console.error("Error fetching reminders:", err.message)
@@ -26,7 +26,7 @@ export default function App() {
     console.log('Sending reminder:', { message: text, reminder_datetime: datetime, reminder_type: method })
 
     try {
-      const res = await axios.post('https://reminder-ve5p.onrender.com//api/reminders', {
+      const res = await axios.post('http://localhost:3000/api/reminders', {
         message: text,
         reminder_datetime: datetime,
         reminder_type: method,
@@ -65,8 +65,8 @@ export default function App() {
           onChange={e => setMethod(e.target.value)}
           className="select-method"
         >
-          <option value="SMS">SMS</option>
-          <option value="Email">Email</option>
+          <option value="SMS">sms</option>
+          <option value="Email">email</option>
         </select>
 
         <button
