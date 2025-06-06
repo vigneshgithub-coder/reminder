@@ -11,7 +11,7 @@ const reminderSchema = new mongoose.Schema({
   },
   reminder_type: {
     type: String,
-    enum: ['sms', 'email'],  // lowercase to match frontend
+    // enum: ['sms', 'email'],  // lowercase to match frontend
     required: true,
   },
 });
