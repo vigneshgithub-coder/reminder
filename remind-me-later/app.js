@@ -12,7 +12,7 @@ app.use(express.json());
 
 // --- CORS setup ---
 app.use(cors({
-  origin: 'https://reminder-2-2ktk.onrender.com/',
+  origin: 'https://reminder-2-2ktk.onrender.com',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
   credentials: true
