@@ -26,7 +26,7 @@ export default function App() {
     console.log('Sending reminder:', { message: text, reminder_datetime: datetime, reminder_type: method })
 
     try {
-      const res = await axios.post('https://reminder-ve5p.onrender.com//api/reminders', {
+      const res = await axios.post('https://reminder-ve5p.onrender.com/api/reminders', {
         message: text,
         reminder_datetime: datetime,
         reminder_type: method,
